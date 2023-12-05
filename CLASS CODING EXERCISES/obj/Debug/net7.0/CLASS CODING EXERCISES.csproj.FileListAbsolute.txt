@@ -1,0 +1,15 @@
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\bin\Debug\net7.0\CLASS CODING EXERCISES.exe
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\bin\Debug\net7.0\CLASS CODING EXERCISES.deps.json
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\bin\Debug\net7.0\CLASS CODING EXERCISES.runtimeconfig.json
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\bin\Debug\net7.0\CLASS CODING EXERCISES.dll
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\bin\Debug\net7.0\CLASS CODING EXERCISES.pdb
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.csproj.AssemblyReference.cache
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.AssemblyInfoInputs.cache
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.AssemblyInfo.cs
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.csproj.CoreCompileInputs.cache
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.dll
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\refint\CLASS CODING EXERCISES.dll
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.pdb
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\CLASS CODING EXERCISES.genruntimeconfig.cache
+C:\Users\alana\Class-coding-exercises-\CLASS CODING EXERCISES\obj\Debug\net7.0\ref\CLASS CODING EXERCISES.dll
