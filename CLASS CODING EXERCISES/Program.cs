@@ -1,67 +1,20 @@
 ﻿// See https://aka.ms/new-console-templatea for more information
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.IO.Compression;
 using System.Runtime.CompilerServices;
+using System.Xml.Linq;
 using Microsoft.VisualBasic;
-//asks for the name
-Console.WriteLine("What is your name?");
-var name = Console.ReadLine();
-//clears the console 
+using System;
+
+Console.WriteLine("Write your input here:");
+double x = Convert.ToDouble(Console.ReadLine() );
+//sleep
+System.Threading.Thread.Sleep(1000);
 Console.Clear();
-//prints the name 
-    Console.Write("Hello, " + name);
-// random number generator
-//var random = new Random();
-//Console.WriteLine(random.Next(1,4));
+Console.WriteLine("Your input is: " + x);
+Console.WriteLine("The square root of your input is: " + Math.Sqrt(x));
+Console.WriteLine("The squared input is: " + Math.Pow(x,2));
+System.Threading.Thread.Sleep(1200);
 Console.Clear();
-// trying to loop the math part of the program 
-bool retry = true;
-//Loops while true 
-while (retry){
-
-retry = true;
-//math 
-double x;
-double y;
-double z;
-string calc;
-// first number
-Console.Write("Enter a number");
-x = Convert.ToDouble(Console.ReadLine());
-//second number
-Console.Write("Enter another number: ");
-y = Convert.ToDouble(Console.ReadLine());
-// decides what to do with the numbers - * / + -
-Console.Write("\n Now please select a calculation");
-// if not a number program will stop : (
-// a true cocunut.png moment 
-calc = Convert.ToString(Console.ReadLine());
-
-if (calc== "*")
-{
-    z = x * y;
-    Console.WriteLine("The answer is " + z);
-    retry = false;
-
-}
-if (calc == "/")
-{
-    z = x / y;
-    Console.WriteLine("The answer is " + z);
-    retry = false;
-}
-if (calc == "+")
-{
-    z = x + y;
-    Console.WriteLine("The answer is " + z);
-    retry = false;
-}
-if (calc == "-")
-{
-    z = x - y;
-    Console.WriteLine("The answer is " + z);
-    retry = false;
-}
-Console.ReadKey();
-}
-//end of math
+return 0; 
