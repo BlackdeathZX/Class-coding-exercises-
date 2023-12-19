@@ -11,6 +11,11 @@ using System.Xml.XPath;
 using System.Linq.Expressions;
 using System.Net.NetworkInformation;
 using System.Reflection.Metadata;
+using System.Security.Cryptography;
+using System.Xml;
+using System.Security.Cryptography.X509Certificates;
+using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 /*
 // opgaver 
 {
@@ -195,6 +200,15 @@ mph = kph /1.609f;
 Console.WriteLine("Your speed in metres/sec is {0}", mps);
 Console.WriteLine("Your speed in km/h is {0}", kph);
 Console.WriteLine("Your speed in miles/h is {0}", mph);
+
+// opgave 8 
+double Pi = 3.1415926535;
+Console.Write("Insert radius of a circle: ");
+double radius = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Volume of your spehere {0} ", 4*Pi*(radius*radius));
+
+Console.WriteLine("Area of a Sphere {0}", 4f/3f * Pi *(radius*radius*radius));
 // opgave 10
 double oe, eo;
 bool bothEven;
@@ -292,10 +306,225 @@ if (m!=0)
         if (size >= 195.0f){
         Console.Write("You are humongus");
     }
-    
     // opgave 8
-    //not done 
     Console.WriteLine("input three numbers to find out which numbers are biggest");
-    Console.WriteLine("Input first number");
-    float big1 = 
-    */
+    double nur1 = Convert.ToDouble(Console.ReadLine());
+    double nur2 = Convert.ToDouble(Console.ReadLine());
+    double nur3 = Convert.ToDouble(Console.ReadLine());
+    if (nur1 > nur2)
+    {
+        if (nur1 > nur3)
+        {
+            Console.WriteLine("The number {0} is the greatest among the other two", nur1);
+        }
+        else 
+        { 
+             Console.WriteLine("The number {0} is the greatest among the other two", nur3);
+        }
+    }
+    else if (nur2 > nur3){
+            Console.WriteLine("The number {0} is the greatest among the other two", nur2);
+        }
+   // opgave 9
+   Console.WriteLine("Input cordinates of a point to determine if the point is in first, second, third or fourth quadrant");
+   Console.WriteLine("Input x coordinate");
+float xpoint = Convert.ToInt64(Console.ReadLine());
+Console.WriteLine("Input y coordinate");
+float ypoint = Convert.ToInt64(Console.ReadLine());
+if (xpoint >= 0)
+    if (ypoint >= 0){
+        Console.WriteLine("The coordinate point ({0} {1}) is in the first quadrant", xpoint,ypoint);
+    }
+if (xpoint >= 0)
+    if (ypoint <= 0){
+        Console.WriteLine("The coordinate point ({0} {1}) is in the second quadrant", xpoint,ypoint);
+    }
+if (xpoint <= 0)
+ if(ypoint <= 0){
+    Console.WriteLine("The coordinate point ({0} {1}) is in the third quadrant", xpoint,ypoint);
+ }
+ else {
+    Console.WriteLine("The coordinate point ({0} {1}) is in the fourth quadrant", xpoint,ypoint);
+ }
+// opgave 10
+int math, Phy, Chem;
+
+Console.WriteLine("Find eligibility for admission :");
+Console.WriteLine("\n\n Eligibility Criteria :");
+Console.Write("Marks in Maths >=65\n");
+Console.Write("and Marks in Phy >=55\n");
+Console.Write("and Marks in Chem>=50\n");
+Console.Write("and Total in all three subject >=180\n");
+Console.Write("or Total in Maths and Physics >=140\n");
+Console.Write("Input your optained Mathematics marks\n");
+math = Convert.ToInt16(Console.ReadLine());
+Console.Write("Input your obtained Physics marks\n");
+Phy = Convert.ToInt16(Console.ReadLine());
+Console.Write("Input your obtained Chemistry marks\n");
+Chem = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Total marks of Maths, physics, and Chemistry {0}\n", math+Phy+Chem);
+Console.Write("Total marks of Physics and Maths\n",math+Phy);
+
+if (math >= 65)
+    if(Phy>=55)
+        if(Chem >= 50)
+        if ((math+Phy+Chem) >=)
+
+//opgave 11
+Console.WriteLine("Calculate root of Quadratic Equation :\n");
+
+double dq, xq1, xq2;
+
+Console.WriteLine("Input the value of a :");
+int aq = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Input the value of b :");
+int bq = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Input the value of c :");
+int cq = Convert.ToInt16(Console.ReadLine());
+
+dq = bq*bq-4*aq*cq;
+if(dq == 0)
+{
+    Console.WriteLine("Both roots are equal.");
+    xq1=bq/(2.0*aq);
+    xq2 =xq1;
+    Console.WriteLine("First Root Root1 = {0}", xq1 );
+    Console.WriteLine("Second Root Root2 = {0}",xq2 );
+}
+else if (dq>0){
+Console.WriteLine("Both roots are diffrent from each other");
+
+xq1=(-bq+Math.Sqrt(dq))/(2*aq);
+xq2=(-bq-Math.Sqrt(dq))/(2*aq);
+
+Console.WriteLine("First Root Root1= {0}\n", xq1);
+Console.WriteLine("Second Root Root2= {0}\n", xq2);
+}
+else Console.WriteLine("There is no solution");
+//opgave 12
+double rl, phy, che, ca, total, per;
+string nm, div=null;
+
+Console.WriteLine("Calculate the total, percentage and division to take marks of three subjects:");
+
+Console.WriteLine("Input the Roll number of the student");
+rl = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Input the Name of the Student :");
+nm = Console.ReadLine();
+
+Console.WriteLine("Input The marks of physics");
+phy = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input The marks of Chemistry");
+che = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input the marks of computer application");
+ca = Convert.ToDouble(Console.ReadLine());
+
+total = phy+che+ca;
+per = total/3.0;
+if (per > 60)
+div = "First";
+else if (per <= 60)
+    if (per >48)
+    div= "Second";
+else if (per <= 48)
+    if(per >= 36)
+    div = "Pass";
+    else 
+    div ="Fail";
+
+Console.WriteLine("\nRoll No : {0}\nName of Student : {1}\n", rl,nm);
+Console.WriteLine("marks in Physcis : {0}\nMarks in Chemistry : {1}\n Makrs in Computer Application : {2}\n",phy, che,ca);
+ Console.Write("Total Marks = {0}\nPercentage = {1}\nDivision = {2}\n",total,per,div);
+ //opgave 13
+ 
+  float temperature;
+  Console.WriteLine("Input the temperature in degress celsius");
+  temperature = Convert.ToInt64(Console.ReadLine());
+
+  switch(temperature){
+    case <0:
+        Console.WriteLine("The weater is freezing");
+    break;
+    case > 0 and < 10:
+       Console.WriteLine("The weater is very cold");
+    break;
+    case >= 10 and < 20:
+       Console.WriteLine("The weater is normal Temp");
+    break;
+    case >= 20 and < 30:
+       Console.WriteLine("The weater is hot");
+    break;
+    case >= 40:
+       Console.WriteLine("The weater is very hot");
+    break;
+  }
+// opgave 14 
+double sidea, sideb, sidec;
+
+Console.WriteLine("Check whether a triangle is Equilateral, Isosceles or Scalene:");
+Console.WriteLine("Input side 1 of triangle");
+sidea = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input side 2 of triangle");
+sideb = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input side 3 of triangle");
+sidec = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine(""+sidea + sideb + sidec);
+if (sidea==sideb){
+    if (sideb == sidec){
+        Console.WriteLine("This is an equilateral triangle");
+    }
+}
+else if (sidea == sideb  || sidea == sidec || sideb == sidec)
+{
+    Console.WriteLine("This is a isosceles triangle");
+}
+else 
+{
+    Console.WriteLine("This is a sclene triangle");
+}
+// opgave 15
+Console.WriteLine("Input 3 diffrent angles");
+double cornera, cornerb, cornerc;
+Console.WriteLine("Input corner a");
+cornera = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input corner b");
+cornerb = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input corner c ");
+cornerc = Convert.ToDouble(Console.ReadLine());
+
+switch(cornera + cornerb + cornerc){
+
+case 180:
+Console.WriteLine("The triangle is valid");
+break;
+
+case < 180:
+Console.WriteLine("The triangle is invalid");
+break;
+
+case > 180:
+Console.WriteLine("The triangle is invalid");
+break;
+}
+*/
+//opgave 16 
+char alph;
+Console.WriteLine("check whether the input alphabet is a vowel or not:");
+Console.WriteLine("Input an Alphabet (A-Z or a-z) :");
+alph = Convert.ToChar(Console.ReadLine().ToLower());
+int le = alph;
+if (le>= 48)
+    if (le <= 57){
+        Console.WriteLine("You entered a number, Please enter an alphabet.");
+    }
+else if (alph == 'a' || alph == 'i' || alph == 'o' || alph == 'u' || alph == 'e')
+{
+    Console.WriteLine("The alphabet is a vowel");
+}
+else 
+{
+Console.WriteLine("The alphabet is not a vowel");
+}
+ 
